@@ -23,7 +23,10 @@ _Note that there will be no actual closed-loop control of the vehicle. You will 
 
 # 👾 Hack Ideas
 
-- TBD
+- Recognize predestrians
+- Develop HMIs to fuse point cloud data on an OpenStreeMap
+- Use the LiDAR to scan a 3D Object
+- Welcome the owner á la Face ID
 
 # 💻 Requirements
 
