@@ -1,0 +1,44 @@
+syntax = "proto2";
+
+package pb.SensorNearData;
+
+import "header.proto";
+import "SensorNearData/SensorStates.proto";
+
+message PowerTrain
+{
+    enum Gear
+    {
+        GEAR_N      =  0;
+        GEAR_R      =  1;
+        GEAR_P      =  2;
+        GEAR_D      =  3;
+        GEAR_D1     =  4;
+        GEAR_D2     =  5;
+        GEAR_D3     =  6;
+        GEAR_D4     =  7;
+        GEAR_D5     =  8;
+        GEAR_D6     =  9;
+        GEAR_D7     = 10;
+        GEAR_SNA    = 11;
+        GEAR_UNDEF  = 12;
+    }
+
+    message Errs
+    {
+        optional  SensorStates gear                  =  1 [default = STATE_FAULT];  ///
+        optional  SensorStates gas_pedal_pos         =  2 [default = STATE_FAULT];  ///
+    }
+
+
+    message Signals
+    {
+        optional  float   gas_pedal_pos         =  3 [default = 0.0];    /// [%]
+        optional  Gear    gear                  =  7 [default = GEAR_N]; ///
+    }
+
+
+    optional  pb.Header             header                  =  1;                  /// common message header, like timestamp [us]
+    optional  Errs                  errs                    =  3;                  ///
+    optional  Signals               signals                 =  4;                  ///
+}

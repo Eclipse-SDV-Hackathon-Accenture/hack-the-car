@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+package pb.Arbitration;
+
+import "header.proto";
+
+message IndicatorRequest
+{
+  enum Indicator
+  {
+    IS_OFF   =  0;
+    IS_LEFT  =  1;
+    IS_RIGHT =  2;
+    IS_BOTH  =  3;
+  }
+
+  optional pb.Header header            = 1; 
+  optional Indicator indicator_request = 2;
+}

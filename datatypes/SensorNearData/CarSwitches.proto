@@ -1,0 +1,84 @@
+syntax = "proto2";
+
+package pb.SensorNearData;
+
+import "header.proto";
+import "SensorNearData/SensorStates.proto";
+
+message CarSwitches
+{
+    enum Wiper
+    {
+        WI_OFF              = 0;
+        WI_WISCHWASCH       = 1;
+        WI_SLOW             = 2;
+        WI_FAST             = 3;
+        WI_AUTO_WISCHWASCH  = 4;
+        WI_AUTO_SLOW        = 5;
+        WI_AUTO_FAST        = 6;
+    }
+
+    enum Blinker
+    {
+        BL_OFF   = 0;
+        BL_RIGHT = 1;
+        BL_LEFT  = 2;
+        BL_WARN  = 3;
+    }
+
+    enum Lamps
+    {
+        LAMP_OFF        =  0;
+        LAMP_LOWBEAM    =  1;
+        LAMP_HIGHBEAM   =  2;
+        LAMP_FOG_FRONT  =  4;
+        LAMP_FOG_REAR   =  8;
+        LAMP_DAYLIGHT   = 16;
+        LAMP_PARKING    = 32;
+        LAMP_BRAKE      = 64;
+    }
+
+    enum CruiseControl
+    {
+        ACC_RESUME_PRESSED      =  1;
+        ACC_IS_ACTIVE           =  2;
+        ACC_DRV_OVERRIDE        =  4;
+        ACC_INCREASE_PRESSED    =  8;
+        ACC_DECREASE_PRESSED    = 16;
+        ACC_GAP_PRESSED         = 32;
+        ACC_SET_PRESSED         = 64;
+        ACC_ONOFF_PRESSED       = 128;
+        ACC_MODE_PRESSED        = 256;
+        ACC_CANCEL_PRESSED      = 512;
+        ACC_GAP_DECREASE_PRESSED= 1024;
+    }
+
+    message Errs
+    {
+        optional  SensorStates    blinker                        =   2 [default = STATE_FAULT];
+        optional  SensorStates    lamps                          =   3 [default = STATE_FAULT];
+        optional  SensorStates    wiper_front                    =   4 [default = STATE_FAULT];
+        optional  SensorStates    cruise_control                 =   6 [default = STATE_FAULT];
+    }
+    
+    message Signals
+    {
+        optional  Blinker          blinker                        =   2  [default = BL_OFF];
+        optional  uint32           lamps                          =   3;                         /// Bitfield for enum "Lamps"
+        optional  Wiper            wiper_front                    =   4  [default = WI_OFF];     ///
+        optional  uint32           cruise_control                 =   6  [default = 0];          /// Bitfield for enum  "CruiseControl"
+    }
+
+    message Timestamp
+    {
+        optional  sint64 blinker                        =   2;    /// [us]
+        optional  sint64 lamps                          =   3;    /// [us]
+        repeated  sint64 wiper_front                    =   4;    /// [us]
+        optional  sint64 cruise_control                 =   6;    /// [us]
+    }
+
+    optional  pb.Header             header                  =  1;                 /// common message header, like timestamp 
+    optional  Errs                  errs                    =  3;                 ///
+    optional  Signals               signals                 =  4;                 ///
+    optional  Timestamp             timestamps              =  6;                 ///
+}

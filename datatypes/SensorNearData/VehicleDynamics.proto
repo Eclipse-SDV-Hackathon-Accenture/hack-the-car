@@ -1,0 +1,50 @@
+syntax = "proto2";
+
+package pb.SensorNearData;
+
+import "header.proto";
+import "SensorNearData/SensorStates.proto";
+
+message VehicleDynamics
+{
+    message Errs
+    {
+        optional  SensorStates speed                       =  1 [default = STATE_FAULT];    ///
+        optional  SensorStates speed_displayed             =  2 [default = STATE_FAULT];    ///
+        repeated  SensorStates speed_per_wheel             =  3 [packed = true];            ///
+        optional  SensorStates long_acc                    =  4 [default = STATE_FAULT];    ///
+        optional  SensorStates lat_acc                     =  5 [default = STATE_FAULT];    ///
+        optional  SensorStates yawrate                     =  6 [default = STATE_FAULT];    ///
+        optional  SensorStates steering_wheel_angle        =  7 [default = STATE_FAULT];    ///
+        optional  SensorStates steering_wheel_angle_speed  =  8 [default = STATE_FAULT];    ///
+    }
+
+    message Signals
+    {
+        optional  float   speed                       =  1;                  /// [m/s]
+        optional  float   speed_displayed             =  2;                  /// [m/s]
+        repeated  float   speed_per_wheel             =  3 [packed = true];  /// for each wheel m/s
+        optional  float   long_acc                    =  4;                  /// [m/s**2]
+        optional  float   lat_acc                     =  5;                  /// [m/s**2]
+        optional  float   yawrate                     =  6;                  /// [rad/s]
+        optional  float   steering_wheel_angle        =  7;                  /// rad
+        optional  float   steering_wheel_angle_speed  =  8;                  /// rad/s
+    }
+
+    message Timestamp
+    {
+        optional  sint64 speed                       =  1;    /// [us] 
+        optional  sint64 speed_displayed             =  2;    /// [us] 
+        repeated  sint64 speed_per_wheel             =  3 [packed = true];  /// [us] 
+        optional  sint64 long_acc                    =  4;    /// [us] 
+        optional  sint64 lat_acc                     =  5;    /// [us] 
+        optional  sint64 yawrate                     =  6;    /// [us] 
+        optional  sint64 steering_wheel_angle        =  7;    /// [us] 
+        optional  sint64 steering_wheel_angle_speed  =  8;    /// [us] 
+    }
+
+    optional  pb.Header             header                  =  1;                  /// common message header, like timestamp
+    optional  Errs                  errs                    =  3;                  ///
+    optional  Signals               signals                 =  4;                  ///
+    optional  Timestamp             timestamps              =  7;                  ///
+}

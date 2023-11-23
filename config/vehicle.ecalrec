@@ -1,0 +1,34 @@
+<ecalRecServerConfig config_version="4">
+    <rootDirectory>$TARGET{OSSELECT WIN "C:" LINUX "$TARGET{ENV HOME}"}/ecal_meas</rootDirectory>
+    <measurementName>$HOST{TIME}_measurement</measurementName>
+    <maxFileSizeMib>1000</maxFileSizeMib>
+    <oneFilePerTopic>false</oneFilePerTopic>
+    <description>Measurement started by: $HOST{USERNAME}@$HOST{HOSTNAME}
+Date: $HOST{TIME %F %R}
+</description>
+    <recorders>
+        <client>
+            <name>MYHOSTNAME</name>
+            <hostFilter/>
+            <enabledAddons/>
+        </client>
+    </recorders>
+    <preBufferEnabled>false</preBufferEnabled>
+    <preBufferLengthSecs>0.000000</preBufferLengthSecs>
+    <useBuiltInRecorder>true</useBuiltInRecorder>
+    <topicList type="whitelist">
+        <topic>BrakeInPb</topic>
+        <topic>CarSwitchesInPb</topic>
+        <topic>PowerTrainInPb</topic>
+        <topic>ROSFrontCenterImage</topic>
+        <topic>ROSGlobalPosition</topic>
+        <topic>ROSTrafficParticipantList</topic>
+        <topic>ROSVLS128CenterCenterRoof</topic>
+        <topic>ROSVLS128CenterCenterRoofTransform</topic>
+        <topic>ROSVehiclePoseTransforms</topic>
+        <topic>VehicleDynamicsInPb</topic>
+    </topicList>
+    <uploadConfig protocol="internal">
+        <deleteAfterUpload>false</deleteAfterUpload>
+    </uploadConfig>
+</ecalRecServerConfig>
