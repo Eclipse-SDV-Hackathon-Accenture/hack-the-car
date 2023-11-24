@@ -1,4 +1,4 @@
-# Protobuf datatypes for the test vehicle
+# Protobuf interfaces of the test vehicle
 
 ---
 
