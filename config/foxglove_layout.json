@@ -1,0 +1,339 @@
+{
+  "configById": {
+    "3D!s2p753": {
+      "cameraState": {
+        "distance": 68.49572529405323,
+        "perspective": true,
+        "phi": 51.16915973799032,
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOffset": [
+          27.372851393654624,
+          -160.68060021499184,
+          2.4915860604112863e-15
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "thetaOffset": -34.83082109587782,
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {},
+      "transforms": {},
+      "topics": {
+        "ROSVLS128CenterCenterRoof": {
+          "visible": true,
+          "colorField": "intensity",
+          "colorMode": "colormap",
+          "colorMap": "turbo"
+        },
+        "/studio_node/ego_vehicle_marker": {
+          "visible": false
+        }
+      },
+      "layers": {},
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {}
+    },
+    "Image!4ar829b": {
+      "cameraState": {
+        "distance": 20,
+        "perspective": true,
+        "phi": 60,
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOffset": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "thetaOffset": 45,
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {},
+      "transforms": {},
+      "topics": {},
+      "layers": {},
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {
+        "imageTopic": "ROSFrontCenterImage"
+      }
+    },
+    "map!4fmgflk": {
+      "center": {
+        "lat": 50.13690446126962,
+        "lon": 8.59511707931216
+      },
+      "customTileUrl": "",
+      "disabledTopics": [],
+      "followTopic": "",
+      "layer": "map",
+      "topicColors": {},
+      "zoomLevel": 18,
+      "maxNativeZoom": 18
+    },
+    "3D!2v86hdb": {
+      "cameraState": {
+        "perspective": true,
+        "distance": 18.99999999999157,
+        "phi": 58.84798828125123,
+        "thetaOffset": 166.72801757812738,
+        "targetOffset": [
+          -23.15420427291591,
+          -36.976255514954715,
+          9.894674404345595e-17
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {},
+      "transforms": {
+        "frame:vehicle_rear-axle": {
+          "visible": true
+        },
+        "frame:vehicle_front-axle": {
+          "visible": true
+        },
+        "frame:vehicle_rear-axle_hub-height": {
+          "visible": true
+        },
+        "frame:odometry_flat": {
+          "visible": true
+        },
+        "frame:odometry": {
+          "visible": true
+        }
+      },
+      "topics": {
+        "ROSVLS128CenterCenterRoof": {
+          "visible": true,
+          "colorField": "intensity",
+          "colorMode": "colormap",
+          "colorMap": "turbo"
+        },
+        "/studio_node/ego_vehicle_marker": {
+          "visible": true
+        },
+        "ROSTrafficParticipantList": {
+          "visible": true
+        }
+      },
+      "layers": {},
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {}
+    },
+    "NodePlayground!128bscp": {
+      "selectedNodeId": "9fbc8cad-9a9f-4668-adde-d3964f6819c8",
+      "autoFormatOnSave": true
+    },
+    "Gauge!1esdz7": {
+      "path": "VehicleDynamicsInPb.signals.steering_wheel_angle",
+      "minValue": -10,
+      "maxValue": 10,
+      "colorMap": "red-yellow-green",
+      "colorMode": "gradient",
+      "gradient": [
+        "#000000ff",
+        "#000000ff"
+      ],
+      "reverse": false,
+      "foxglovePanelTitle": "Steering wheel angle"
+    },
+    "RawMessages!47qkoz": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "VehicleDynamicsInPb.signals.speed_per_wheel[:]"
+    },
+    "Gauge!s78un4": {
+      "path": "VehicleDynamicsInPb.signals.speed",
+      "minValue": -1,
+      "maxValue": 6,
+      "colorMap": "red-yellow-green",
+      "colorMode": "colormap",
+      "gradient": [
+        "#0000ff",
+        "#ff00ff"
+      ],
+      "reverse": false,
+      "foxglovePanelTitle": "Vehicle Speed"
+    },
+    "RawMessages!3jrc3yo": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "VehicleDynamicsInPb.signals.speed"
+    },
+    "RawMessages!1vljnls": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "BrakeInPb.signals.driver_pressure"
+    },
+    "RawMessages!z87on4": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "PowerTrainInPb.signals.gas_pedal_pos"
+    },
+    "Gauge!72g1v2": {
+      "path": "PowerTrainInPb.signals.gas_pedal_pos_driver",
+      "minValue": 0,
+      "maxValue": 21,
+      "colorMap": "red-yellow-green",
+      "colorMode": "colormap",
+      "gradient": [
+        "#0000ff",
+        "#ff00ff"
+      ],
+      "reverse": false,
+      "foxglovePanelTitle": "Driver gas pedal position"
+    },
+    "Gauge!3l9dto0": {
+      "path": "BrakeInPb.signals.driver_pressure",
+      "minValue": 0,
+      "maxValue": 22,
+      "colorMap": "red-yellow-green",
+      "colorMode": "colormap",
+      "gradient": [
+        "#0000ff",
+        "#ff00ff"
+      ],
+      "reverse": false,
+      "foxglovePanelTitle": "Driver brake pressure"
+    },
+    "Tab!1tqbgh3": {
+      "activeTabIdx": 0,
+      "tabs": [
+        {
+          "title": "Visualization",
+          "layout": {
+            "first": "3D!s2p753",
+            "second": {
+              "first": "Image!4ar829b",
+              "second": "map!4fmgflk",
+              "direction": "column"
+            },
+            "direction": "row"
+          }
+        },
+        {
+          "title": "Vehicle Position",
+          "layout": {
+            "first": "3D!2v86hdb",
+            "second": "NodePlayground!128bscp",
+            "direction": "row"
+          }
+        },
+        {
+          "title": "Wheel Position",
+          "layout": {
+            "first": "Gauge!1esdz7",
+            "second": "RawMessages!47qkoz",
+            "direction": "row"
+          }
+        },
+        {
+          "title": "Speed and Pedals",
+          "layout": {
+            "first": {
+              "first": "Gauge!s78un4",
+              "second": {
+                "first": {
+                  "first": "RawMessages!3jrc3yo",
+                  "second": "RawMessages!1vljnls",
+                  "direction": "column"
+                },
+                "second": "RawMessages!z87on4",
+                "direction": "column",
+                "splitPercentage": 66.93333333333334
+              },
+              "direction": "column"
+            },
+            "second": {
+              "first": "Gauge!72g1v2",
+              "second": "Gauge!3l9dto0",
+              "direction": "column"
+            },
+            "direction": "row"
+          }
+        }
+      ]
+    }
+  },
+  "globalVariables": {
+    "globalVariable": 0
+  },
+  "userNodes": {
+    "9fbc8cad-9a9f-4668-adde-d3964f6819c8": {
+      "sourceCode": "// convert the ROSVehiclePoseTransforms (converted and modified EgoVehicleState3D)\n// to a MarkerArray for visualization in the Foxglove 3D panel\nimport { Input, Message, Time } from \"./types\";\nimport { buildRosMarker, MarkerTypes } from \"./markers\";\nimport { MessageTypeBySchemaName } from \"./generatedTypes\";\n\n// define inputs and output topics\nexport const inputs = [\"ROSVehiclePoseTransforms\"];\nexport const output = \"/studio_node/ego_vehicle_marker\";\n\ntype MarkerArray = Message<\"visualization_msgs/MarkerArray\">;\ntype InputType = Input<\"ROSVehiclePoseTransforms\">;\n\nvar last_pos: MessageTypeBySchemaName[\"ros.geometry_msgs.Vector3\"];\n\n// *** converter function ***\nexport default function node(event: InputType): MarkerArray {\n  const odo2vehicle = event.message.transforms[0];\n  const cur_pos = odo2vehicle.transform.translation;\n\n  // vehicle as cube marker\n  // has a fixed pose given in the vehicle frame -> automatically shifted via transformation provided in ROSVehiclePoseTransforms\n  const box_size = { x: 4.8, y: 1.8, z: 1.4 }; \n  const box_shift = { x: 1.2, y: 0, z: 0.7 - 0.3 }; // box shift because we do not refer to the center but the rear axle at hub height\n  const vehicle_marker = buildRosMarker({\n    header: {\n      stamp: odo2vehicle.header.stamp,\n      seq: odo2vehicle.header.seq,\n      frame_id: odo2vehicle.child_frame_id, // in vehicle frame\n    },\n    type: MarkerTypes.CUBE,\n    ns: \"ego_vehicle_box\",\n    id: 0,\n    scale: box_size,\n    color: { r: 1, g: 0.647, b: 0, a: 0.8 },\n    pose: {\n      position: box_shift,\n      orientation: { x: 0, y: 0, z: 0, w: 1 },\n    },\n  });\n\n  if (odo2vehicle.header.seq % 5 != 0) {\n    return { markers: [vehicle_marker] };\n  }\n\n  // add one point marker to build trace (disappears after duration given in lifetime)\n  let trace_marker_size = 0.3;\n  const trace_marker = buildRosMarker({\n    header: odo2vehicle.header, // in odometry frame (\"world frame\")\n    type: MarkerTypes.POINTS,\n    ns: \"ego_vehicle_trace\",\n    id: odo2vehicle.header.seq,\n    scale: { x: trace_marker_size, y: trace_marker_size, z: NaN },\n    //color: { r: 1, g: 1, b: 1, a: 0.2 },\n    color: { r: 1.0, g: 0.65, b: 0.0, a: 0.5 },\n    //points: [cur_pos, last_pos],\n    points: [cur_pos],\n    lifetime: { sec: 15, nsec: 0 }, // only works with live data or Foxglove Replay\n  });\n\n  last_pos = odo2vehicle.transform.translation;\n\n  // return as struct with field \"markers\" containing the marker array\n  return { markers: [vehicle_marker, trace_marker] };\n}\n",
+      "name": "9fbc8cad"
+    }
+  },
+  "playbackConfig": {
+    "speed": 0.2
+  },
+  "layout": "Tab!1tqbgh3"
+}
