@@ -45,6 +45,7 @@ _Note that there will be no actual closed-loop control of the vehicle. You will 
 - Florian Reimold
 - Kristof Hannemann
 - Rex Schilasky
+- Florian Geis
 
 # 🛠 Template Setup
 
