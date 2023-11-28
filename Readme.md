@@ -62,6 +62,9 @@ _Note that there will be no actual closed-loop control of the vehicle. You will 
 
 2. Connect your Laptop to the vehicle via ethernet cable.
 
+Example measurement:
+https://drive.google.com/drive/folders/1-wHCBS1mx420NWE4ZJfxF6UJuahHMS0J?usp=sharing
+
 # 👀 All necessary links
 
 **Eclipse eCAL**:
